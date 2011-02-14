@@ -36,7 +36,7 @@ _nginx_sites() {
                | sed 's/[.]conf$//' )' -- $cur  ) )
 }
 
-_nginx_ensite()
+_nensite()
 {
        local cur
 
@@ -46,9 +46,9 @@ _nginx_ensite()
        _nginx_sites sites-available
 }
 
-complete -F _nginx_ensite nginx_ensite
+complete -F _nensite nensite
 
-_nginx_dissite()
+_ndissite()
 {
        local cur
 
@@ -58,4 +58,4 @@ _nginx_dissite()
        _nginx_sites sites-enabled
 }
 
-complete -F _nginx_dissite nginx_dissite
+complete -F _ndissite ndissite
